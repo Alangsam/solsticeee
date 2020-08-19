@@ -4,7 +4,7 @@ const path = require("path");
 
 // app.use(express.static("/api/v1"));
 //track my shit please
-//app.use("/api/v1", express.static("api/v1"));
+app.use("/api/v1", express.static("api/v1"));
 
 // app.get("/", function (req, res) {
 //     res.render("index", {});
