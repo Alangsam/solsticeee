@@ -3,12 +3,8 @@ const app = express();
 const path = "initial.json";
 
 // app.use(express.static("/api/v1"));
-
+//track my shit please
 app.use("/api/v1", express.static("api/v1"));
-
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
 
 const port = process.env.PORT || 3001;
 app.listen(port, () =>
