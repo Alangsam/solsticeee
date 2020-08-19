@@ -6,12 +6,12 @@ const path = "initial.json";
 //track my shit please
 app.use("/api/v1", express.static("api/v1"));
 
-app.get("/", function (req, res) {
-    res.render("index", {});
+// app.get("/", function (req, res) {
+//     res.render("index", {});
+// });
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-//  });
 
 const port = process.env.PORT || 3001;
 app.listen(port, () =>
