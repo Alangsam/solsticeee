@@ -6,7 +6,7 @@ const path = "initial.json";
 
 app.use("/api/v1", express.static("api/v1"));
 
-const port = process.env.PORT || 3013;
+const port = process.env.PORT || 3001;
 app.listen(port, () =>
     console.log(`Server running at http://localhost:${port}`)
 );
